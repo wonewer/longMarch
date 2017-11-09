@@ -1,0 +1,19 @@
+{
+  "name": "wonewer/long-march",
+  "description": "rabbitmq client use php for canal business",
+  "type": "project",
+  "require": {
+    "php-amqplib/php-amqplib": "v2.6.3",
+    "doctrine/orm": "*",
+    "guzzlehttp/guzzle": "^6.2",
+    "justinrainbow/json-schema": "^5.1",
+    "netresearch/jsonmapper": "^1.1",
+    "wonewer/logger-for-sf": "dev-master"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "LongMarch\\": "src/"
+    }
+  }
+}
