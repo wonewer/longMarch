@@ -6,7 +6,7 @@
  * Time: 上午10:15
  */
 
-namespace mqClient;
+namespace LongMarch\MqClient;
 class MQ
 {
     static $_instance;

@@ -1,5 +1,5 @@
 <?php
-namespace Model;
+namespace LongMarch\ForCanal;
 
 /**
  * Created by PhpStorm.

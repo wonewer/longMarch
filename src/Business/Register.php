@@ -6,7 +6,7 @@
  * Time: 16:08
  */
 
-namespace Business;
+namespace LongMarch\Business;
 
 
 class Register

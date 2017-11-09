@@ -1,5 +1,5 @@
 <?php
-
+namespace LongMarch\ForCanal;
 /**
  * Created by PhpStorm.
  * User: apple

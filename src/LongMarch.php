@@ -1,5 +1,5 @@
 <?php
-
+namespace LongMarch;
 /**
  * Created by PhpStorm.
  * User: wonewer

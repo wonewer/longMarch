@@ -6,7 +6,7 @@
  * Time: 上午10:14
  */
 
-namespace mqClient;
+namespace LongMarch\MqClient;
 
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
