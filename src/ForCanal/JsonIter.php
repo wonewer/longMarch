@@ -6,7 +6,7 @@ namespace LongMarch\ForCanal;
  * Date: 2017/3/3
  * Time: 下午4:43
  */
-class JsonIter extends RecursiveArrayIterator
+class JsonIter extends \RecursiveArrayIterator
 {
     const CLOUMNNAME = 'columnName';
     const COLUMNVALUE = 'columnValue';
@@ -59,7 +59,7 @@ class JsonIter extends RecursiveArrayIterator
     {
         $value = parent::current();
         $key = $this->key();
-        $ret = new stdClass();
+        $ret = new \stdClass();
         if ($key == 'contents') {
             $cloumnName = self::CLOUMNNAME;
             $cloumnValue = self::COLUMNVALUE;

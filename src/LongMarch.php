@@ -1,5 +1,9 @@
 <?php
 namespace LongMarch;
+use LongMarch\ForCanal\Aop;
+use LongMarch\ForCanal\JsonIter;
+use LongMarch\MqClient\MQ;
+
 /**
  * Created by PhpStorm.
  * User: wonewer
@@ -33,13 +37,13 @@ class LongMarch
                 $json = $message->body;
                 $data = json_decode($json);
                 $arrayiter = new JsonIter($data);
-                new \Model\Aop($arrayiter,$this->dbConf);
+                new Aop($arrayiter,$this->dbConf);
                 $message->delivery_info['channel']->basic_ack($message->delivery_info['delivery_tag']);
             } catch (\Exception $e) {
                 $message->delivery_info['channel']->basic_cancel($message->delivery_info['consumer_tag']);
             }
         };
-        $mq = \mqClient\MQ::instance($this->mqConf['host'],$this->mqConf['port'],$this->mqConf['name'],$this->mqConf['pass'],$this->mqConf['query']);
+        $mq = MQ::instance($this->mqConf['host'],$this->mqConf['port'],$this->mqConf['name'],$this->mqConf['pass'],$this->mqConf['query']);
         $mq->connection();
         $mq->recive($callback);
         while (isset($mq->callbacks) && count($mq->callbacks)){
