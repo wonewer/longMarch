@@ -48,12 +48,12 @@ class Aop
         $this->model = $this->cast($modelStr, $this->model);
         $this->model->eventType = $this->eventType;
         $this->model->updateStatus = $this->updateStatus;
-        $this->model->hook($Iterator);
+        call_user_func(array($this->model,strtolower($this->eventType)),$Iterator);
     }
 
     /**
-     * @param $destination \Entities\category\PiCategory
-     * @param $sourceObject 属性json
+     * @param $destination
+     * @param $sourceObject
      * @return mixed
      */
     private function cast($destination, $sourceObject)

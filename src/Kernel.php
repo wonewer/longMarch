@@ -10,7 +10,7 @@ use LongMarch\MqClient\MQ;
  * Date: 2017/11/8
  * Time: 16:10
  */
-class LongMarch
+class Kernel
 {
     /**
      * @var 注册的业务空間
